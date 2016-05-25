@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -50,5 +51,38 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.game_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.new_game:
+                newGame();
+                return false;
+            case R.id.help:
+                showHelp();
+                return true;
+            case R.id.exit:
+                finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void showHelp() {
+        Toast.makeText(MainActivity.this,"You have chosen show Help",Toast.LENGTH_LONG).show();
+    }
+
+
+    private void newGame() {
+        Toast.makeText(MainActivity.this,"You have chosen new Game",Toast.LENGTH_LONG).show();
     }
 }
