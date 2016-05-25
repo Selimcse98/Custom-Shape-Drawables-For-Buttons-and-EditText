@@ -35,7 +35,7 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btn_Cancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
             android:textColor="#f39c12" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_OK"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
